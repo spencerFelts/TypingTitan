@@ -8,7 +8,7 @@ A game created to increase the users typing speed.
 - [Usage](https://github.com/spencerFelts/TypingTitan#Usage)
 - [License](https://github.com/spencerFelts/TypingTitan#License)
 
-### Introduction
+## Introduction
 Do you want to be the fastest typer out of all of your friends? What about the fastest typer in your computer science classses? If you answered no to either of these questions, this game is not for you. Typing Titan is a game created to increase the speed at which the player can type. Although the game is predominantly aimed at computer science students, any casual person wanting to speed-up their typing skills can use this as well! 
 
 ## Technologies
@@ -40,24 +40,24 @@ To make the code in game easier to read I used a simple trim method adding it to
 ```C#
 codeOutput.text += lineRead.Trim() + "\n";
 ```
-Note that the trim method is included inside the read file script. I just wanted to highlight this because of its importance in the game.
+*Note that the trim method is included inside the read file script. I just wanted to highlight this because of its importance in the game.*
 
 ## Installation
 
 ## Usage
-Once you launch the game, you will be loaded into the start screen giving two options: Start the game or quit the application.
+1. Once you launch the game, you will be loaded into the start screen giving two options: Start the game or quit the application.
 
 *start screen*
 
-After clicking start game an open file box will pop up, asking the user to select a .txt file. I have created a few sample files in the TextFiles folder to start with!
+2. After clicking start game an open file box will pop up, asking the user to select a .txt file. I have created a few sample files in the TextFiles folder to start with!
 
 *open file box*
 
-Upon choosing a file the game will start. The contents inside of the file will show on the screen and the user will have 30 seconds to completely type the code.
+3. Upon choosing a file the game will start. The contents inside of the file will show on the screen and the user will have 30 seconds to completely type the code.
 
 *gameplay*
 
-When the player runs out of time or completes the code, they will be met with the final screen. This will give them the option to play again or quit the application.
+4. When the player runs out of time or completes the code, they will be met with the final screen. This will give them the option to play again or quit the application.
 
 *final scene*
 
