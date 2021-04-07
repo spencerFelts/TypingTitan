@@ -14,7 +14,33 @@ Do you want to be the fastest typer out of all of your friends? What about the f
 ## Technologies
 Typing Titan was created using the C# language inside Unity.
 
-To make the 
+In order to open a file to import into the game I used the Open File Panel and read file script:
+
+```C#
+        string openPath = EditorUtility.OpenFilePanel("Please select a .txt file!", "", "txt");
+
+        if (openPath.Length != 0)
+        {
+            var fileContent = File.ReadAllBytes(openPath);
+        }
+        string lineRead = "";
+        codeOutput.text = "";
+
+        StreamReader reader = new StreamReader(openPath);
+        while (!reader.EndOfStream)
+        {
+            lineRead = reader.ReadLine();
+            Debug.Log(lineRead);
+            codeOutput.text += lineRead.Trim() + "\n";
+        }
+        reader.Close();
+ ```
+
+To make the code in game easier to read I used a simple trim method adding it to the lineRead:
+```C#
+codeOutput.text += lineRead.Trim() + "\n";
+```
+Note that the trim method is included inside the read file script. I just wanted to highlight this because of its importance in the game.
 
 ## Installation
 
