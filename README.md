@@ -14,26 +14,24 @@ Do you want to be the fastest typer out of all of your friends? What about the f
 ## Technologies
 Typing Titan was created using the C# language inside Unity.
 
-In order to open a file to import into the game I used the Open File Panel and read file script:
+In order to read the file after choosing it from a file dialog box I used:
 
 ```C#
-        string openPath = EditorUtility.OpenFilePanel("Please select a .txt file!", "", "txt");
+            if (ofn.file.Length != 0)
+            {
+                var fileContent = File.ReadAllBytes(ofn.file);
+            }
+            string lineRead = "";
+            codeOutput.text = "";
 
-        if (openPath.Length != 0)
-        {
-            var fileContent = File.ReadAllBytes(openPath);
-        }
-        string lineRead = "";
-        codeOutput.text = "";
-
-        StreamReader reader = new StreamReader(openPath);
-        while (!reader.EndOfStream)
-        {
-            lineRead = reader.ReadLine();
-            Debug.Log(lineRead);
-            codeOutput.text += lineRead.Trim() + "\n";
-        }
-        reader.Close();
+            StreamReader reader = new StreamReader(ofn.file);
+            while (!reader.EndOfStream)
+            {
+                lineRead = reader.ReadLine();
+                Debug.Log(lineRead);
+                codeOutput.text += lineRead.Trim() + "\n";
+            }
+            reader.Close();
  ```
 
 To make the code in game easier to read I used a simple trim method adding it to the lineRead:
@@ -45,19 +43,24 @@ codeOutput.text += lineRead.Trim() + "\n";
 ## Installation
 
 ## Usage
-1. Once you launch the game, you will be loaded into the start screen giving two options: Start the game or quit the application.
+1. Once you launch the game, you will be loaded into the start screen giving three options: Start the game, quit the application, and/or choose a time limit. 
 
 *start screen*
 
-2. After clicking start game an open file box will pop up, asking the user to select a .txt file. I have created a few sample files in the TextFiles folder to start with!
+2. After clicking start game an open file box will pop up, asking the user to select a file. I have created a few sample files in the Sample Files folder to start with!
 
 *open file box*
 
-3. Upon choosing a file the game will start. The contents inside of the file will show on the screen and the user will have 30 seconds to completely type the code.
+3. If the user hits cancel on the open file box an error screen will be shown prompting the user to go back to the start menu and choose a file.
+
+
+
+4. Upon choosing a file the game will start. The contents inside of the file will show on the screen and the user will have the previous chosen time to completely type the code.
+*90 seconds is the default time if nothing is chosen*
 
 *gameplay*
 
-4. When the player runs out of time or completes the code, they will be met with the final screen. This will give them the option to play again or quit the application.
+5. When the player runs out of time or completes the code, they will be met with the final screen. This will give them the option to play again or quit the application.
 
 *final scene*
 
