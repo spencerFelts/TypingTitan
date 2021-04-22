@@ -41,6 +41,23 @@ codeOutput.text += lineRead.Trim() + "\n";
 *Note that the trim method is included inside the read file script. I just wanted to highlight this because of its importance in the game.*
 
 ## Installation
+In order to play the game follow the following steps:
+
+1. Download this Github repository
+2. Open the Typing Titan folder
+3. Open the Assets folder
+4. Open the Scenes folder
+5. Right click the StartScreen scene with the icon next to it
+6. Press "open with" and choose Unity Editor
+
+Once the editor opens you will need to create an executable:
+
+1. Click the file tab in the top left corner
+2. Click "build and run" from the dropdown
+3. It will ask where you want to create the executable. Choosing the GitHub file is okay!
+4. After you choose where you want to create it, the game should load.
+
+Have fun and enjoy practicing your typing skills! Create your own text files and becoming the fastest typer you know!
 
 ## Usage
 1. Once you launch the game, you will be loaded into the start screen giving three options: Start the game, quit the application, and/or choose a time limit. 
