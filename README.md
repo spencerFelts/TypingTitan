@@ -45,24 +45,24 @@ codeOutput.text += lineRead.Trim() + "\n";
 ## Usage
 1. Once you launch the game, you will be loaded into the start screen giving three options: Start the game, quit the application, and/or choose a time limit. 
 
-*start screen*
+![StartScreen](https://github.com/spencerFelts/TypingTitan/blob/main/pictures/StartScreen.PNG)
 
 2. After clicking start game an open file box will pop up, asking the user to select a file. I have created a few sample files in the Sample Files folder to start with!
 
-*open file box*
+![OpenFile](https://github.com/spencerFelts/TypingTitan/blob/main/pictures/FileDialog.PNG)
 
 3. If the user hits cancel on the open file box an error screen will be shown prompting the user to go back to the start menu and choose a file.
 
-
+![Error](https://github.com/spencerFelts/TypingTitan/blob/main/pictures/ErrorScreen.PNG)
 
 4. Upon choosing a file the game will start. The contents inside of the file will show on the screen and the user will have the previous chosen time to completely type the code.
 *90 seconds is the default time if nothing is chosen*
 
-*gameplay*
+![Gameplay](https://github.com/spencerFelts/TypingTitan/blob/main/pictures/Gameplay.PNG)
 
 5. When the player runs out of time or completes the code, they will be met with the final screen. This will give them the option to play again or quit the application.
 
-*final scene*
+![FinalScreen](https://github.com/spencerFelts/TypingTitan/blob/main/pictures/FinalScreen.PNG)
 
 ## License
 MIT License
