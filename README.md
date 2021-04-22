@@ -17,21 +17,21 @@ Typing Titan was created using the C# language inside Unity.
 In order to read the file after choosing it from a file dialog box I used:
 
 ```C#
-            if (ofn.file.Length != 0)
-            {
-                var fileContent = File.ReadAllBytes(ofn.file);
-            }
-            string lineRead = "";
-            codeOutput.text = "";
+if (ofn.file.Length != 0)
+{
+   var fileContent = File.ReadAllBytes(ofn.file);
+}
+string lineRead = "";
+codeOutput.text = "";
 
-            StreamReader reader = new StreamReader(ofn.file);
-            while (!reader.EndOfStream)
-            {
-                lineRead = reader.ReadLine();
-                Debug.Log(lineRead);
-                codeOutput.text += lineRead.Trim() + "\n";
-            }
-            reader.Close();
+StreamReader reader = new StreamReader(ofn.file);
+while (!reader.EndOfStream)
+{
+   lineRead = reader.ReadLine();
+   Debug.Log(lineRead);
+   codeOutput.text += lineRead.Trim() + "\n";
+}
+reader.Close();
  ```
 
 To make the code in game easier to read I used a simple trim method adding it to the lineRead:
